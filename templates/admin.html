@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+    .form-container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .form-submit {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="form-container">
+    <form method="POST">
+        {{ form.csrf_token }}
+
+        <div class="form-group">
+            <label for="word" class="form-label">Word:</label>
+            {{ form.word(size=20, class="form-input") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="form-submit") }}
+        </div>
+    </form>
+        <div>
+            {{ message }}
+        </div>
+
+</div>
+</body>
+</html>
