@@ -5,3 +5,4 @@ flask_mysqldb
 flask
 flask_wtf
 wtforms
+gunicorn==19.7.1
